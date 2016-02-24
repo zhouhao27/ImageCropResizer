@@ -2,7 +2,7 @@
 
 #import <Cordova/CDV.h>
 
-@interface ModusEcho : CDVPlugin
+@interface ImageCropResizer : CDVPlugin
 
 - (void)echo:(CDVInvokedUrlCommand*)command;
 

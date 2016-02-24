@@ -1,9 +1,9 @@
 /* ModusEcho.m */
 
-#import "ModusEcho.h"
+#import "ImageCropResizer.h"
 #import <Cordova/CDV.h>
 
-@implementation ModusEcho
+@implementation ImageCropResizer
 
 - (void)echo:(CDVInvokedUrlCommand*)command
 {

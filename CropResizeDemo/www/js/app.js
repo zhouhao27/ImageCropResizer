@@ -10,7 +10,7 @@ angular.module('starter', ['ionic'])
   $scope.result = '';
   
   $scope.pickPhoto = function() {
-    ImageCropResizer.echo('hello world!!',function(data) {
+    ImageCropResizer.echo('hello ! world!!',function(data) {
       alert(data);
     }, function(error) {
       alert(error);

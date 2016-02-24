@@ -4,7 +4,7 @@
     <description>A Cordova Plugin to crop/resize the image</description>
     <license>MIT</license>
     <keywords>cordova,image,crop,resize</keywords>
-    <js-module name="ImageCropResizer" src="www/ModusEcho.js">
+    <js-module name="ImageCropResizer" src="www/resizer.js">
         <clobbers target="ImageCropResizer" />
     </js-module>
 	<platform name="android">
@@ -17,11 +17,11 @@
 	</platform>
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="ModusEcho">
-                <param name="ios-package" value="ModusEcho" />
+            <feature name="ImageCropResizer">
+                <param name="ios-package" value="ImageCropResizer" />
             </feature>
         </config-file>
-        <header-file src="src/ios/ModusEcho.h" />
-        <source-file src="src/ios/ModusEcho.m" />
+        <header-file src="src/ios/ImageCropResizer.h" />
+        <source-file src="src/ios/ImageCropResizer.m" />
     </platform>
 </plugin>

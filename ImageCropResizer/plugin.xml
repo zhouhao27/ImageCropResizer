@@ -9,11 +9,11 @@
     </js-module>
 	<platform name="android">
 		<config-file target="config.xml" parent="/*">
-			<feature name="ModusEcho">
-				<param name="android-package" value="com.moduscreate.plugin.ModusEcho" />
+			<feature name="ImageCropResizer">
+				<param name="android-package" value="org.cordova.plugin.ImageCropResizer" />
 			</feature>
 		</config-file>
-        <source-file src="src/android/com/moduscreate/plugin/ModusEcho.java" target-dir="src/com/moduscreate/plugin" />
+        <source-file src="src/android/org/cordova/plugin/ImageCropResizer.java" target-dir="src/org/cordova/plugin" />
 	</platform>
     <platform name="ios">
         <config-file target="config.xml" parent="/*">

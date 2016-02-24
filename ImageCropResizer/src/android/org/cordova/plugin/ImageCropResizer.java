@@ -1,4 +1,4 @@
-package com.moduscreate.plugin;
+package org.cordova.plugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
@@ -8,11 +8,11 @@ import org.json.JSONException;
 import android.content.Context;
 import android.widget.Toast;
 
-public class ModusEcho extends CordovaPlugin {
+public class ImageCropResizer extends CordovaPlugin {
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-		if ("echo".equals(action)) {
-			echo(args.getString(0), callbackContext);
+		if ("cropResize".equals(action)) {
+      echo("cropResize called", callbackContext);
 			return true;
 		}
 
@@ -21,6 +21,7 @@ public class ModusEcho extends CordovaPlugin {
 
 	private void echo(String msg, CallbackContext callbackContext) {
 		if (msg == null || msg.length() == 0) {
+      Toast.makeText(webView.getContext(), "Empty message", Toast.LENGTH_LONG).show();
 			callbackContext.error("Empty message!");
 		} else {
 			Toast.makeText(webView.getContext(), msg, Toast.LENGTH_LONG).show();

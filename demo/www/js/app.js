@@ -10,16 +10,8 @@ angular.module('starter', ['ionic'])
   $scope.result = '';
   
   $scope.pickPhoto = function() {
-    // ImageCropResizer.echo('hello ! world!!',function(data) {
-    //   alert(data);
-    // }, function(error) {
-    //   alert(error);
-    // });    
-     
     ImageCropResizer.cropResize(function(data) {
-      
-    }, function(error) {
-      
+    }, function(error) {      
     }, null, 600,300, null);
   }
 })

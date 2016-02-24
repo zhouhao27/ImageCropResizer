@@ -10,7 +10,7 @@ angular.module('starter', ['ionic'])
   $scope.result = '';
   
   $scope.pickPhoto = function() {
-    modusecho.echo('hello!!!',function(data) {
+    modusecho.echo('hello world!!!',function(data) {
       alert(data);
     }, function(error) {
       alert(error);

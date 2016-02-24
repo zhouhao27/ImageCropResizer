@@ -6,12 +6,44 @@
 angular.module('starter', ['ionic'])
 
 .controller('PhotoController', function($scope) {
-  $scope.thumbnail = 'http://nemanjakovacevic.net/wp-content/uploads/2013/07/placeholder.png';
   $scope.result = '';
   
-  $scope.pickPhoto = function() {
+  $scope.pickPhoto = function() { 
+    
+    var options = { 
+      quality : 75, 
+      destinationType : Camera.DestinationType.DATA_URL, 
+      sourceType : Camera.PictureSourceType.PHOTOLIBRARY, 
+      allowEdit : true,
+      encodingType: Camera.EncodingType.JPEG,
+      targetWidth: 300,
+      targetHeight: 300,
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false
+    };
+ 
+    navigator.camera.getPicture(function(imageData) {
+      $scope.thumbnail = "data:image/jpeg;base64," + imageData;
+      setTimeout(function() {
+        $scope.$apply();
+      });
+    }, function(error) {
+      
+    }, options);
+    
+ /*
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+        $scope.imgURI = "data:image/jpeg;base64," + imageData;
+    }, function(err) {
+        // An error occured. Show a message to the user
+    });
+*/
+    
+  }
+  
+  $scope.resize = function() {
     ImageCropResizer.cropResize(function(data) {
     }, function(error) {      
-    }, null, 600,300, null);
+    }, null, 600,300, null);    
   }
 })

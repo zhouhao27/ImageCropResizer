@@ -1,13 +1,17 @@
 var exec = require('cordova/exec');
 
-exports.echo = function(arg0, success, error) {
-    exec(success, error, "ModusEcho", "echo", [arg0]);
-};
-
-exports.echojs = function(arg0, success, error) {
-    if (arg0 && typeof(arg0) === 'string' && arg0.length > 0) {
-        success(arg0);
-    } else {
-        error('Empty message!');
-    }
-};
+exports.cropResize = function(success, fail, imageData, width, height, options) {
+  if (!options) {
+    options = {};
+  }
+  
+  var params = {
+    data: imageData,
+    width: width ? width : 0,
+    height: height ? height : 0,
+    format: options.format ? options.format : "jpg",
+    quality: options.quality ? options.quality : 75
+  }
+  
+  exec(success, fail, "ImageCropResizer", "cropResize", ['cropResize called']);
+}

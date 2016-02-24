@@ -23,5 +23,7 @@
         </config-file>
         <header-file src="src/ios/ImageCropResizer.h" />
         <source-file src="src/ios/ImageCropResizer.m" />
+		<header-file src="src/ios/NSData+Base64.h" />
+        <source-file src="src/ios/NSData+Base64.m" />        
     </platform>
 </plugin>

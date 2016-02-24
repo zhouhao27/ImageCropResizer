@@ -1,6 +1,6 @@
-# Cordova Plugin Example
+# Cordova Plugin ImageCropResizer
 
-Example Cordova plugin for iOS and Android to support blog post.
+A Cordova Plugin to crop/resize the image.
 
 A simple Cordova plugin based on the echo plugin example from the [Cordova documentation](https://cordova.apache.org/docs/en/latest/guide/hybrid/plugins/index.html).
 

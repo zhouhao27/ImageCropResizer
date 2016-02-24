@@ -1,9 +1,9 @@
 {
   "name": "ImageCropResizer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Cordova plugin to crop/resize the image",
   "cordova": {
-    "id": "com-moduscreate-plugins-echo",
+    "id": "cordova-plugins-imagecropresizer",
     "platforms": [
       "android",
       "ios"
@@ -15,13 +15,15 @@
   },
   "keywords": [
     "cordova",
-    "demo",
-    "modus",
+    "plugin",
+    "image",
+    "resize",
+    "crop",
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios"
   ],
-  "author": "Modus Create",
+  "author": "Zhou Hao",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ModusCreateOrg/cordova-plugin-example/issues"

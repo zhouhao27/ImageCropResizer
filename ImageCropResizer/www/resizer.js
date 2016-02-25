@@ -13,6 +13,5 @@ exports.cropResize = function(success, fail, imageData, width, height, options) 
     quality: options.quality ? options.quality : 75
   }
   
-  //exec(success, fail, "ImageCropResizer", "cropResize", ['cropResize called']);
   exec(success, fail, "ImageCropResizer", "cropResize", [params]);
 }

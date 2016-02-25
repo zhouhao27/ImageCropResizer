@@ -13,17 +13,17 @@
 				<param name="android-package" value="org.cordova.plugin.ImageCropResizer" />
 			</feature>
 		</config-file>
-        <source-file src="src/android/org/cordova/plugin/ImageCropResizer.java" target-dir="src/org/cordova/plugin" />
+    <source-file src="src/android/org/cordova/plugin/ImageCropResizer.java" target-dir="src/org/cordova/plugin" />
 	</platform>
-    <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="ImageCropResizer">
-                <param name="ios-package" value="ImageCropResizer" />
-            </feature>
-        </config-file>
-        <header-file src="src/ios/ImageCropResizer.h" />
-        <source-file src="src/ios/ImageCropResizer.m" />
-		<header-file src="src/ios/NSData+Base64.h" />
-        <source-file src="src/ios/NSData+Base64.m" />        
-    </platform>
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="ImageCropResizer">
+        <param name="ios-package" value="ImageCropResizer" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/ImageCropResizer.h" />
+    <source-file src="src/ios/ImageCropResizer.m" />
+    <header-file src="src/ios/NSData+Base64.h" />
+    <source-file src="src/ios/NSData+Base64.m" />        
+  </platform>
 </plugin>

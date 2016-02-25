@@ -2,9 +2,13 @@
 
 #import <Cordova/CDV.h>
 
-@interface ImageCropResizer : CDVPlugin
+@interface ImageCropResizer : CDVPlugin {
+  NSString* callbackID;
+}
 
-- (void)echo:(CDVInvokedUrlCommand*)command;
+@property (nonatomic, copy) NSString* callbackID;
+
+//- (void)echo:(CDVInvokedUrlCommand*)command;
 - (void)cropResize:(CDVInvokedUrlCommand*)command;
 
 @end

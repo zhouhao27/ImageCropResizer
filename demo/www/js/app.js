@@ -6,7 +6,7 @@
 angular.module('starter', ['ionic'])
 
 .controller('PhotoController', function($scope) {
-  $scope.result = '';
+  $scope.imageData = null;
   
   $scope.pickPhoto = function() { 
     
@@ -24,6 +24,7 @@ angular.module('starter', ['ionic'])
  
     navigator.camera.getPicture(function(imageData) {
       $scope.thumbnail = "data:image/jpeg;base64," + imageData;
+      $scope.imageData = imageData;
       setTimeout(function() {
         $scope.$apply();
       });
@@ -34,8 +35,13 @@ angular.module('starter', ['ionic'])
   }
   
   $scope.resize = function() {
-    ImageCropResizer.cropResize(function(data) {
-    }, function(error) {      
-    }, null, 600,300, null);    
+    ImageCropResizer.cropResize(function(data) {   
+      $scope.resultImage = "data:image/jpeg;base64," + data.imageData;
+      setTimeout(function() {
+        $scope.$apply();
+      });      
+    }, function(error) {
+      alert(error);      
+    }, $scope.imageData, 100,100, null);    
   }
 })

@@ -1,5 +1,5 @@
 {
-  "name": "ImageCropResizer",
+  "name": "image-crop-resizer",
   "version": "1.0.0",
   "description": "A Cordova plugin to crop/resize the image",
   "cordova": {
